@@ -26,9 +26,9 @@
                         @foreach ( $estudiantes as $estudiante )
                             <tr>
                                 <td style="display: none;">{{ $estudiante->id }}</td>
-                                <td class="text-white text-center">{{ $estudiante->nombre }}</td>
-                                <td class="text-white text-center">{{ $estudiante->apellido }}</td>
-                                <td class="text-white text-center">{{ $estudiante->dni }}</td>
+                                <td class="text-gray-500 text-center">{{ $estudiante->nombre }}</td>
+                                <td class="text-gray-500 text-center">{{ $estudiante->apellido }}</td>
+                                <td class="text-gray-500 text-center">{{ $estudiante->dni }}</td>
                                 <td>
                                     <div class="flex justify-center">
                                         <img src="/imagen/{{ $estudiante->imagen }}" width="60%">
