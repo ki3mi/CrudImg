@@ -29,6 +29,9 @@ RUN composer require laravel/octane spiral/roadrunner
 
 COPY .env.example .env
 
+RUN pecl channel-update pecl.php.net
+RUN pecl install swoole
+
 RUN php artisan key:generate
 RUN php artisan octane:install --server="swoole"
 
