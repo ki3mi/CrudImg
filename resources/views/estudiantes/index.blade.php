@@ -7,29 +7,32 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                <a type="button" href="{{ route('estudiantes.create') }}" class="bg-indigo-500 px-12 py-2 rounded text-gray-200 font-semibold hover:bg-indigo-800 transition duration-200 each-in-out">Crear</a>
+                <a type="button" href="{{ route('estudiantes.create') }}" class="bg-indigo-500 px-12 py-2 rounded text-gray-200 font-semibold hover:bg-indigo-800 transition duration-200 each-in-out w-full text-center">Crear</a>
 
                 <table class="table-fixed w-full">
                     <thead>
                         <tr class="bg-gray-800 text-white">
                             <th style="display: none;">ID</th>
-                            <th class="border px-4 py-2">NOMBRE</th>
-                            <th class="border px-4 py-2">APELLIDOS</th>
-                            <th class="border px-4 py-2">DNI</th>
-                            <th class="border px-4 py-2">FOTO</th>
-                            <th class="border px-4 py-2">ACCIÓN</th>
+                            <th class="py-4">NOMBRE</th>
+                            <th class="py-4">APELLIDOS</th>
+                            <th class="py-4">DNI</th>
+                            <th class="py-4">FOTO</th>
+                            <th class="py-4">ACCIÓN</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ( $estudiantes as $estudiante )
                             <tr>
                                 <td style="display: none;">{{ $estudiante->id }}</td>
-                                <td class="text-white">{{ $estudiante->nombre }}</td>
-                                <td class="text-white">{{ $estudiante->apellido }}</td>
-                                <td class="text-white">{{ $estudiante->dni }}</td>
+                                <td class="text-white text-center">{{ $estudiante->nombre }}</td>
+                                <td class="text-white text-center">{{ $estudiante->apellido }}</td>
+                                <td class="text-white text-center">{{ $estudiante->dni }}</td>
                                 <td>
-                                    <img src="/imagen/{{ $estudiante->imagen }}" width="60%">
+                                    <div class="flex justify-center">
+                                        <img src="/imagen/{{ $estudiante->imagen }}" width="60%">
+                                    </div>                                                  
                                 </td>
                                 <td class="boroder px-4 py-2">
                                     <div class="flex justify-center rounded-lg text-lg" role="group">
